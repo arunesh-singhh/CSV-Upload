@@ -1,0 +1,51 @@
+<body>
+    <!-- home.ejs -->
+
+    <div>
+        <div class="fileList m-3">
+            <h1>Uploaded Files</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Filename</th>
+                        <th> </th>
+                        <th> </th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% files.forEach(function(file) { %>
+                        <tr>
+                            <td>
+                                <%= file.filename %>
+                            </td>
+                            <td> </td>
+                            <td> </td>
+                            <td class="text-light">
+                                <a href="/csv/<%= file._id %>">View</a>
+                            </td>
+                        </tr>
+                        <% }); %>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="container mt-5 header border border-dark bg-info p-3 ">
+            <h1 class="text-center mb-4">CSV Upload</h1>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form action="/upload" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="csvFile">Select a CSV file to upload:</label>
+                            <input type="file" class="form-control-file" id="csvFile" name="csv" accept=".csv">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Upload</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
