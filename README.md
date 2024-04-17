@@ -20,6 +20,14 @@ After the file is uploaded, you will see it listed on the page. Click on the fil
 
 To search through the data, enter a search term in the search box. The search will be performed on all columns, and only the rows that match the search term will be displayed.
 
+## Tools used:
+1. Nodejs <br/>
+2. Expressjs <br/>
+3. MongoDB <br/>
+4. EJS <br/>
+5. CSS <br/>
+6. JavaScript <br/>
+
 ## Contributing
 If you would like to contribute to the project, please fork the repository and submit a pull request with your changes.
 
